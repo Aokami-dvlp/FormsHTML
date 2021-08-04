@@ -10,9 +10,12 @@
 
 <body>
     <form action='#'>
-        <label for="form-username"> Nome Utente </label>
+        <label for="form-username"> Nome Utente: </label>
         <input type="text" name="username" id="form-username"><br><br>
-        <fieldset style="width: fit-content;">
+        <label for="form-comment">Indicazioni aggiuntive:</label><br>
+        <textarea name="comment" id="form-comment"></textarea> <br><br>
+
+        <fieldset style="width: max-content;">
             <legend> Menù Pizze </legend>
             <input type="radio" id="opzione1" name="opzione-input" value="margherita">
             <label for="opzione1"> Margherita </label><br>
@@ -20,6 +23,26 @@
             <label for="opzione2"> Quattro Formaggi </label><br>
             <input type="radio" id="opzione3" name="opzione-input" value="speck-provola">
             <label for="opzione3"> Speck e Provola </label><br>
+        </fieldset>
+        <br><br>
+        <label for="menu"> Seleziona pizza: </label>
+        <select id="pizza" name="gusto">
+            <option value="margherita"> Margherita </option>
+            <option value="quattro-formaggi"> Quattro Formaggi </option>
+            <option value="speck-provola"> Speck e Provola </option>
+        </select>
+        <br><br>
+        <fieldset style="display: flex; flex-direction: column;">
+            <legend> Aggiungi ingredienti </legend>
+            <label class='checkbox-label' for='funghi'>
+            <input id='funghi' name='add-on' type='checkbox' value='funghi'/>
+            Funghi + 1,00€</label>
+            <label class='checkbox-label' for='salamep'>
+            <input id='salamep' name='add-on' type='checkbox' value='salame-piccante'/>
+            Salame piccante + 1,00€</label>
+            <label class='checkbox-label' for='mozzarella'>
+            <input id='mozzarella' name='add-on' type='checkbox' value='doppia-mozzarella'/>
+            Doppia mozzarella + 1,00€</label>
         </fieldset>
     </form>
 </body>

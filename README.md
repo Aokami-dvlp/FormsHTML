@@ -49,6 +49,15 @@ Per definire un campo di testo dunque inseriamo prima la sua label e poi il camp
 ```
 il pattern sopra specificato ci dice che, i caratteri considerati validi in quell'input sono solo le lettere ([A-Z a-z] quindi sia maiuscole che minuscole) e che la lunghezza di quell'input deve essere dai 3 caratteri in su ({3,}), mentre specificando solo un numero, ad esempio {3}, imponiamo un numero fisso di caratteri, oppure possiamo impostarne un range specificando 2 valori {3,20}.
 
+Per l'inserimento di un input di testo più consistente (come ad esempio i commenti degli utenti in un blog) utilizzeremo invece **Textarea**
+
+```
+<label for="form-comment">Indicazioni aggiuntive:</label>
+    <textarea name="comment" id="form-comment"></textarea> 
+```
+
+Attenzione, **textarea** non è autochiudente come il tag input!
+
 Un altro elemento molto utile per esprimere delle scelte in un range predefinito di opzioni è il **Radio Button** il quale permette una singola scelta in una lista di possibilità.
 
 Per strutturare una lista di scelte dipendente dai radio buttons andremo a racchiuderla interamente in un **fieldset** etichettandola con **legend** invece che con un semplice **label**, il quale invece servirà per etichettare le opzioni disponibili:
@@ -65,7 +74,28 @@ Per strutturare una lista di scelte dipendente dai radio buttons andremo a racch
 ```
 In questo caso, per assegnare un valore di default alla scelta, o comunque costringere l'utente a fare una scelta all'interno della stessa, possiamo specificare alla fine del tag input l'attributo **checked** in maniera che al momento del caricamento della pagina quell'opzione sia già contrassegnata.
 
+Alternativamente ai radio button, per effettuare una singola scelta da una lista di opzioni, possiamo usare **select** per creare il classico menù a tendina:
 
+```
+<label for="menu"> Seleziona pizza </label>
+<select id="pizza" name="gusto">
+<option value="margherita"> Margherita </option>
+<option value="quattro-formaggi"> Quattro Formaggi </option>
+<option value="speck-provola"> Speck e Provola </option>
+</select>
+```
 
-
-
+Nel caso vi sia la necessità di scegliere più opzioni dalla lista (o semplicemente dare all'utente la possibilità di selezionare e deselezionare un determinato campo) possiamo avvalerci dei checkbox:
+```
+<legend> Aggiungi ingredienti </legend>
+<label class='checkbox-label' for='funghi'>
+  <input id='funghi' name='add-on' type='checkbox' value='funghi'/>
+    Funghi + 1,00€</label>
+<label class='checkbox-label' for='salamep'>
+  <input id='salamep' name='add-on' type='checkbox' value='salame-piccante'/>
+    Salame piccante + 1,00€</label>
+<label class='checkbox-label' for='mozzarella'>
+  <input id='mozzarella' name='add-on' type='checkbox' value='doppia-mozzarella'/>
+    Doppia mozzarella + 1,00€</label>
+```
+a differenza dei radio button, i checkbox non necessitano di essere racchiusi in un **fieldset** (che ho aggiunto nel codice allegato solo per una questione di stile), ma nel loro utilizzo è una best practice svilupparli interamente all'interno della loro label.
