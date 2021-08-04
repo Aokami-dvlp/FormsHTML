@@ -99,3 +99,9 @@ Nel caso vi sia la necessità di scegliere più opzioni dalla lista (o semplicem
     Doppia mozzarella + 1,00€</label>
 ```
 a differenza dei radio button, i checkbox non necessitano di essere racchiusi in un **fieldset** (che ho aggiunto nel codice allegato solo per una questione di stile), ma nel loro utilizzo è una best practice svilupparli interamente all'interno della loro label.
+
+L'ultimo elemento che possiamo inserire nel form, è quello che ci permetterà finalmente di inviarlo al nostro server: il **Button**
+```
+<button type="submit">Invia il tuo ordine!</button>
+```
+La pressione del button è l'ultima azione che vogliamo compia il nostro utente, deve dunque essere ben visibile, e ben stilizzato.

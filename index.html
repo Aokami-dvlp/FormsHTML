@@ -17,7 +17,7 @@
 
         <fieldset style="width: max-content;">
             <legend> Menù Pizze </legend>
-            <input type="radio" id="opzione1" name="opzione-input" value="margherita">
+            <input type="radio" id="opzione1" name="opzione-input" value="margherita" checked>
             <label for="opzione1"> Margherita </label><br>
             <input type="radio" id="opzione2" name="opzione-input" value="quattro-formaggi">
             <label for="opzione2"> Quattro Formaggi </label><br>
@@ -32,7 +32,7 @@
             <option value="speck-provola"> Speck e Provola </option>
         </select>
         <br><br>
-        <fieldset style="display: flex; flex-direction: column;">
+        <fieldset style="display: flex; flex-direction: column; width: max-content ;">
             <legend> Aggiungi ingredienti </legend>
             <label class='checkbox-label' for='funghi'>
             <input id='funghi' name='add-on' type='checkbox' value='funghi'/>
@@ -44,6 +44,8 @@
             <input id='mozzarella' name='add-on' type='checkbox' value='doppia-mozzarella'/>
             Doppia mozzarella + 1,00€</label>
         </fieldset>
+        <br><br>
+        <button type="submit">Invia il tuo ordine!</button>
     </form>
 </body>
 
